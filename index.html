@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<title>fitness dash</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+
+.w3-third {
+display:none;
+padding: 5px;
+}
+
+.filterDiv {
+  float: left;
+  text-align: center;
+  margin: 10px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  display:grid;
+  grid-template-columns: 400px 400px 400px;
+  overflow: hidden;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Style the buttons */
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Fitness dash</a>
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Warmup</a>
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Workout 2</a>
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Workout 3</a>
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Workout 4</a>
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Workout 5</a>
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Abs bench exercises</a>
+    <a href="tension_bands.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Resistance band exercises</a>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>Fitness Dash</b></h1>
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+      <button class="btn" onclick="filterSelection('hiit')"> hiit</button>
+      <button class="btn" onclick="filterSelection('abs')"> abs</button>
+      <button class="btn" onclick="filterSelection('arms')"> arms</button>
+      <button class="btn" onclick="filterSelection('legs')"> legs</button>
+    </div>
+    </div>
+  </header>
+  
+    
+<!-- Gifjes rijen -->
+<div class="container">
+  <div class="filterDiv hiit"><img src="https://cdn.dribbble.com/users/2931468/screenshots/5720362/jumping-jack.gif" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Jumping jacks</div>
+  <div class="filterDiv hiit arms abs"><img src="https://media.tenor.com/images/2f034acea2c85ae997bb36396c31c0ea/tenor.gif" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Burpees</div>
+  <div class="filterDiv arms"><img src="https://media.tenor.com/images/58cc0c7477ea44689ccadb511217f00a/tenor.gif" alt="Norway" style="width:100%" class="w3-hover-opacity hiit"> Push-Ups</div>
+  
+  <div class="filterDiv legs hiit"><img src="https://media1.popsugar-assets.com/files/thumbor/_lXAMHBPW-8tkW-YCZldRUqga1I/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2021/02/03/007/n/45061871/87fd80fe601b2d6f9562e0.85153018_BUTT_KICKS/i/Butt-Kicks.g" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Butt kicks</div>
+  <div class="filterDiv hiit legs"><img src="https://flabfix.com/wp-content/uploads/2019/08/Quick-Feet.gif" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Quick feet</div>
+  <div class="filterDiv hiit abs"><img src="https://media0.giphy.com/media/TMNCtgJGJnV8k/giphy.gif" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Bicycle crunch</div>
+  
+  <div class="filterDiv hiit abs"><img src="https://flabfix.com/wp-content/uploads/2019/05/Sit-Ups.gif" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Situps</div>
+  <div class="filterDiv hiit legs"><img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/workouts/2016/03/bodyweightsquatjump-1457041758.gif?crop=1xw:1xh;center,top&resize=480:*" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Jumping squats</div>
+  <div class="filterDiv abs "><img src="https://media2.giphy.com/media/HRTRkBuLpUqI6CrJhf/giphy.gif" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Heel touch</div>
+  
+  <div class="filterDiv legs hiit"><img src="http://cstwiki.wtb.tue.nl/images/High-knees-exericse.gif" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">High Knees</div>
+  <div class="filterDiv abs arms hiit"><img src="https://media1.popsugar-assets.com/files/thumbor/Iu8waoj6rmL6c7B8gZUdS1ZIa3I/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2017/06/08/791/n/1922729/c4943793a2ba2dd5_SlowerClimbers.gif" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Mountain climber</div>
+  <div class="filterDiv arms hiit"><img src="https://media.self.com/photos/5accd555dbf9c97076ae8257/master/w_1600%2Cc_limit/lita-lewis-shadow-box.gif" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Punches</div>
+
+  <div class="filterDiv abs"><img src="https://i.pinimg.com/originals/04/e4/42/04e4425ceaf57c8d34b37837762044b5.gif" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Flutter kicks</div>
+  <div class="filterDiv arms"><img src="https://static.toiimg.com/thumb/62945349.cms?width=400&height=300&resizemode=4&imgsize=355959" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Arm swings</div>
+  <div class="filterDiv abs hiit arms"><img src="https://thumbs.gfycat.com/OpulentZanyBumblebee-size_restricted.gif" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Plank</div>
+
+  <div class="filterDiv arms"><img src="https://thumbs.gfycat.com/CompleteZigzagFossa-max-1mb.gif" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Tricep dips</div>
+  <div class="filterDiv legs hiit"><img src="https://i.pinimg.com/originals/40/c3/07/40c307a23cde01af771dfb54a83f8e26.gif" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Toy soldiers</div>
+  <div class="filterDiv arms"><img src="https://hips.hearstapps.com/ame-prod-menshealth-assets.s3.amazonaws.com/main/assets/bicep-curl.gif?resize=480:*" alt="Norway" style="width:100%" class="w3-hover-opacity hiit">Bicep curls</div>
+
+</div>
+
+
+  
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+</script>
+
+</body>
+</html>
