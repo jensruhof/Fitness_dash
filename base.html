@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>fitness dash</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script src="script.js"></script>
+
+  <!-- Header -->
+<header id="portfolio">
+  <div class="w3-container">
+  <h1><b>Fitness Dash</b></h1>
+  </div>
+</header>
+
+  <!-- NAVBAR -->
+<div class="navbar">
+  <div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')">Show all</button>
+    <button class="btn" onclick="filterSelection('hiit')">hiit</button>
+    <button class="btn" onclick="filterSelection('abs')">abs</button>
+    <button class="btn" onclick="filterSelection('arms')">arms</button>
+    <button class="btn" onclick="filterSelection('legs')">legs</button>
+  </div>
+</div>
+
+{% block content %}
+{% endblock %}
